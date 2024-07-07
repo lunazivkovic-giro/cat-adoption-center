@@ -1,0 +1,53 @@
+.sidebar {
+    width: 400px;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+  
+  .search-button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .sort-section {
+    margin-top: 2.5rem;
+  }
+  
+  .sort-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sort-radio-button {
+    margin-bottom: 0.5rem;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .search-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .search-subtitle {
+    font-size: 13px;
+    padding: 10px;
+    color: gray;
+    margin-bottom: 20px;
+  }
+  
+  .sort-radio-button-wrapper {
+    margin-bottom: 8px; 
+  }

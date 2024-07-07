@@ -1,0 +1,22 @@
+<div class="cat-list-container">
+    <app-sidebar (search)="onSearch($event)" (sort)="onSort($event)"></app-sidebar>
+    <div class="main-content">
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+      <div *ngIf="filteredCats.length === 0 && !errorMessage" class="no-data-found">
+        No data found
+      </div>
+  
+      <div class="cat-grid" *ngIf="filteredCats.length > 0 && !errorMessage">
+        <mat-card class="cat-card" *ngFor="let cat of filteredCats" [routerLink]="['/cat', cat.id]">
+          <img mat-card-image [src]="cat.image" alt="{{ cat.name }}">
+          <mat-card-content>
+            <h2>{{ cat.name }}</h2>
+            <p>Age: {{ cat.age }}</p>
+            <p>Breed: {{ cat.breed }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div #sentinel></div>
+    </div>
+  </div>

@@ -1,0 +1,100 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(100% - 90px);
+    padding-top: 90px;
+    overflow: auto; 
+    background-color: #f0f0f0;
+  }
+  
+  .cat-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .cat-detail-card {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+  }
+  
+  .cat-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .cat-name {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .cat-subname {
+    margin-top: 10px;
+  }
+  
+  .mat-card-header {
+    background-color: #eeeeee;
+    padding: 1rem;
+    border-radius: 0 0 12px 12px;
+  }
+  
+  .mat-card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333333;
+  }
+  
+  .mat-card-subtitle {
+    font-size: 1.2rem;
+    color: #777777;
+  }
+  
+  .mat-card-content {
+    padding: 1.5rem;
+    color: #555555;
+  }
+  
+  .mat-card-content p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+  }
+  
+  .mat-card-content strong {
+    color: #333333;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .loading-message {
+    text-align: center;
+    margin-top: 2rem;
+  }

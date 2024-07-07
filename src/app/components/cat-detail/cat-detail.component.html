@@ -1,0 +1,33 @@
+
+  <div class="content-wrapper">
+    <div *ngIf="cat; else loadingOrError" class="cat-detail-container">
+      <mat-card class="cat-detail-card">
+        <button mat-icon-button class="close-button" (click)="close()">
+          <mat-icon>close</mat-icon>
+        </button>
+        <img mat-card-image [src]="cat.image" alt="{{ cat.name }}" class="cat-image">
+        <mat-card-header>
+          <mat-card-title class="cat-name"> {{ cat.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="cat-subname"><strong>Age: </strong>{{ cat.age }}</p>
+          <p class="cat-subname"><strong>Breed: </strong>{{ cat.breed }}</p>
+          <p><strong>Listed At:</strong> {{ formatDate(cat.listed_at) }}</p>
+          <p>{{ cat.description }}</p>
+          <p><strong>Contact name:</strong> {{ cat.contact_name }}</p>
+          <p><strong>Phone number:</strong> {{ cat.contact_phone }}</p>
+          <div *ngIf="cat.adoption_fee || cat.is_adopted !== undefined">
+            <p *ngIf="cat.adoption_fee"><strong>Adoption Fee:</strong> {{ cat.adoption_fee }}</p>
+            <p *ngIf="cat.is_adopted !== undefined">
+              <strong>Status:</strong> {{ cat.is_adopted ? 'Adopted' : 'Available for Adoption' }}
+            </p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <ng-template #loadingOrError>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <div *ngIf="!errorMessage" class="loading-message">Loading...</div>
+    </ng-template>
+  </div>

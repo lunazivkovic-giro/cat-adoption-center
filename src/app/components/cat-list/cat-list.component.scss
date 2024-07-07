@@ -1,0 +1,128 @@
+.cat-list-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 90px;
+  }
+  
+  .sidebar {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-content {
+    flex: 1;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .cat-card {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .cat-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .cat-card h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+  }
+  
+  .cat-card p {
+    margin: 0.5rem 0;
+  }
+  
+  .cat-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .no-data-found {
+    color: gray;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .cat-list-container {
+      flex-direction: row;
+    }
+  
+    .sidebar {
+      width: 400px;
+      flex-shrink: 0;
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+  
+  .search-button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .sort-section {
+    margin-top: 2.5rem;
+  }
+  
+  .sort-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sort-radio-button {
+    margin-bottom: 0.5rem;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .search-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .search-subtitle {
+    font-size: 13px;
+    padding: 10px;
+    color: gray;
+    margin-bottom: 20px;
+  }
+  
+  .sort-radio-button-wrapper {
+    margin-bottom: 8px; 
+  }
